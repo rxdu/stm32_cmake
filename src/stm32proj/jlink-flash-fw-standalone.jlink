@@ -1,0 +1,4 @@
+h
+loadfile stm32proj.hex, 0x8000000
+r
+q

@@ -6,7 +6,7 @@ set(LSS_TARGET ${PROJECT_NAME}.lss)
 
 # flash
 add_custom_target(jlink_flash 
-    COMMAND JLinkExe -device ${MCU_NAME} -speed 4000 -if SWD -CommanderScript ${CMAKE_SOURCE_DIR}/${STM32_PROJ_FOLDER}/jlink-flash-fw-standalone.jlink
+    COMMAND JLinkExe -device ${MCU_NAME} -speed 4000 -if SWD -CommanderScript ${CMAKE_CURRENT_LIST_DIR}/jlink-flash-fw-standalone.jlink
 )
 
 # reset

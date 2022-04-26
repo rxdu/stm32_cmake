@@ -25,7 +25,7 @@ add_custom_target(release_binary
 
 # reset
 add_custom_target(jlink_reset 
-    COMMAND JLinkExe -device ${MCU_NAME} -speed 4000 -if SWD -CommanderScript ${CMAKE_CURRENT_SOURCE_DIR}/jlink/jlink-reset-stm32f4.jlink
+    COMMAND JLinkExe -device ${MCU_NAME} -speed 4000 -if SWD -CommanderScript ${CMAKE_SOURCE_DIR}/scripts/jlink-reset-stm32f4.jlink
 )
 
 # GDB
@@ -36,7 +36,7 @@ add_custom_target(jlink_gdb_server
 
 add_custom_target(jlink_gdb_debug 
     DEPENDS ${ELF_TARGET} 
-    COMMAND ${ARM_GDB_EXECUTABLE} -x ${CMAKE_CURRENT_BINARY_DIR}/../scripts/jlink-debug.gdbinit $(PROG).elf
+    COMMAND ${ARM_GDB_EXECUTABLE} -x ${CMAKE_SOURCE_DIR}/scripts/jlink-debug.gdbinit $(PROG).elf
 )
 
 # # string should be less than 30 bytes

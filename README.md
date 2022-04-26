@@ -38,13 +38,21 @@ Now you can try to compile the sample project using the cmake template.
 ```
 $ cd <root-folder-of-this-repo>
 $ mkdir build
-$ cmake ../src
-$ make
+$ cmake ..
+$ make -j
 ```
-If the "cmake ../src" step runs successfully, you should see something similar to the below screenshot:
+If the "cmake .." step runs successfully, you should see something similar to the below screenshot:
 
 ![cmake step](docs/stm32_cmake1.png)
 
 Then you can continue to actually compile the code and you can expect a similar result:
 
 ![cmake step](docs/stm32_cmake2.png)
+
+You can find the compiled **.elf**, **.hex** and **.bin** binary files in "build/src".
+
+Reference:
+
+* https://github.com/ahessling/STM32F4Template
+* https://gitlab.kitware.com/cmake/community/wikis/doc/cmake/CrossCompiling
+* https://www.bootladder.com/2017/10/09/cmake-and-gradle-for-arm-c-c.html

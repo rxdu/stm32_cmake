@@ -36,8 +36,8 @@ Generally there are two ways to set up the toolchain:
 Now you can try to compile the sample project using the cmake template.
 
 ```
-$ cd <root-folder-of-this-repo>
-$ mkdir build
+$ cd <path-of-this-repo>
+$ mkdir build && cd build
 $ cmake ..
 $ make -j
 ```
